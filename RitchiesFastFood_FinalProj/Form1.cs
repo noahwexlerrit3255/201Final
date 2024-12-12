@@ -9,6 +9,9 @@ namespace RitchiesFastFood_FinalProj
             InitializeComponent();
         }
 
+        //variable for displaying the total price at the bottom of the form
+        public double totalCash = 0.00;
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -39,8 +42,16 @@ namespace RitchiesFastFood_FinalProj
 
             if (clickedLabel != null)
             {
+                //adds the clicked item to the current order listbox
                 itemsListBox.Items.Add(clickedLabel.Text);
+
+                //(placeholder for getting the price from the selected item);
+
+                //(placeholder for adding that value to totalCash);
             }
+
+            //updates the displayed total price
+            totalIntLabel.Text = $"${totalCash}";
         }
 
         private void itemsListBox_SelectedIndexChanged(object sender, EventArgs e)
