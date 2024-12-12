@@ -32,9 +32,9 @@
             nameTextBox = new TextBox();
             selectItemLabel = new Label();
             mainTable = new TableLayoutPanel();
-            label7 = new Label();
-            label5 = new Label();
-            label2 = new Label();
+            mainitem4 = new Label();
+            mainitem3 = new Label();
+            mainitem2 = new Label();
             mainItem1 = new Label();
             itemsListBox = new ListBox();
             label3 = new Label();
@@ -47,23 +47,23 @@
             mainLabel = new Label();
             sidesLabel = new Label();
             sidesTable = new TableLayoutPanel();
-            label9 = new Label();
-            label8 = new Label();
+            sideitem8 = new Label();
+            sideitem7 = new Label();
+            sideitem6 = new Label();
+            sideitem5 = new Label();
             drinksLabel = new Label();
             drinksTable = new TableLayoutPanel();
+            drinkItem12 = new Label();
+            drinkItem11 = new Label();
+            drinkItem10 = new Label();
+            drinkItem9 = new Label();
             dessertLabel = new Label();
             dessertTable = new TableLayoutPanel();
+            dessertItem16 = new Label();
+            dessertItem15 = new Label();
+            dessertItem14 = new Label();
+            dessertItem13 = new Label();
             label11 = new Label();
-            label10 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
-            label16 = new Label();
-            label17 = new Label();
-            label18 = new Label();
-            label19 = new Label();
-            label20 = new Label();
             mainTable.SuspendLayout();
             sidesTable.SuspendLayout();
             drinksTable.SuspendLayout();
@@ -73,7 +73,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(57, 9);
             label1.Name = "label1";
             label1.Size = new Size(153, 20);
             label1.TabIndex = 0;
@@ -83,7 +83,7 @@
             // 
             // nameTextBox
             // 
-            nameTextBox.Location = new Point(12, 32);
+            nameTextBox.Location = new Point(57, 32);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.Size = new Size(125, 27);
             nameTextBox.TabIndex = 1;
@@ -91,7 +91,7 @@
             // selectItemLabel
             // 
             selectItemLabel.AutoSize = true;
-            selectItemLabel.Location = new Point(12, 62);
+            selectItemLabel.Location = new Point(57, 62);
             selectItemLabel.Name = "selectItemLabel";
             selectItemLabel.Size = new Size(188, 20);
             selectItemLabel.TabIndex = 2;
@@ -107,53 +107,53 @@
             mainTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             mainTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             mainTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            mainTable.Controls.Add(label7, 3, 0);
-            mainTable.Controls.Add(label5, 2, 0);
-            mainTable.Controls.Add(label2, 1, 0);
+            mainTable.Controls.Add(mainitem4, 3, 0);
+            mainTable.Controls.Add(mainitem3, 2, 0);
+            mainTable.Controls.Add(mainitem2, 1, 0);
             mainTable.Controls.Add(mainItem1, 0, 0);
-            mainTable.Location = new Point(12, 113);
+            mainTable.Location = new Point(57, 113);
             mainTable.Name = "mainTable";
             mainTable.RowCount = 1;
             mainTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            mainTable.Size = new Size(520, 113);
+            mainTable.Size = new Size(521, 113);
             mainTable.TabIndex = 3;
             mainTable.Paint += mainTable_Paint;
             // 
-            // label7
+            // mainitem4
             // 
-            label7.AutoSize = true;
-            label7.Dock = DockStyle.Fill;
-            label7.Location = new Point(392, 2);
-            label7.Name = "label7";
-            label7.Size = new Size(123, 109);
-            label7.TabIndex = 3;
-            label7.Text = "Taco - $9.99";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
-            label7.Click += label2_Click_1;
+            mainitem4.AutoSize = true;
+            mainitem4.Dock = DockStyle.Fill;
+            mainitem4.Location = new Point(392, 2);
+            mainitem4.Name = "mainitem4";
+            mainitem4.Size = new Size(124, 109);
+            mainitem4.TabIndex = 3;
+            mainitem4.Text = "Taco - $9.99";
+            mainitem4.TextAlign = ContentAlignment.MiddleCenter;
+            mainitem4.Click += label2_Click_1;
             // 
-            // label5
+            // mainitem3
             // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Fill;
-            label5.Location = new Point(263, 2);
-            label5.Name = "label5";
-            label5.Size = new Size(121, 109);
-            label5.TabIndex = 2;
-            label5.Text = "Hot Dog - $4.99";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
-            label5.Click += label2_Click_1;
+            mainitem3.AutoSize = true;
+            mainitem3.Dock = DockStyle.Fill;
+            mainitem3.Location = new Point(263, 2);
+            mainitem3.Name = "mainitem3";
+            mainitem3.Size = new Size(121, 109);
+            mainitem3.TabIndex = 2;
+            mainitem3.Text = "Hot Dog - $4.99";
+            mainitem3.TextAlign = ContentAlignment.MiddleCenter;
+            mainitem3.Click += label2_Click_1;
             // 
-            // label2
+            // mainitem2
             // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Fill;
-            label2.Location = new Point(134, 2);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 109);
-            label2.TabIndex = 1;
-            label2.Text = "Burger - $13.99";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.Click += label2_Click_1;
+            mainitem2.AutoSize = true;
+            mainitem2.Dock = DockStyle.Fill;
+            mainitem2.Location = new Point(134, 2);
+            mainitem2.Name = "mainitem2";
+            mainitem2.Size = new Size(121, 109);
+            mainitem2.TabIndex = 1;
+            mainitem2.Text = "Burger - $13.99";
+            mainitem2.TextAlign = ContentAlignment.MiddleCenter;
+            mainitem2.Click += label2_Click_1;
             // 
             // mainItem1
             // 
@@ -172,7 +172,7 @@
             itemsListBox.FormattingEnabled = true;
             itemsListBox.Location = new Point(12, 693);
             itemsListBox.Name = "itemsListBox";
-            itemsListBox.Size = new Size(153, 104);
+            itemsListBox.Size = new Size(300, 104);
             itemsListBox.TabIndex = 4;
             itemsListBox.Click += itemsListBox_SelectedIndexChanged;
             // 
@@ -217,7 +217,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(379, 670);
+            label6.Location = new Point(468, 670);
             label6.Name = "label6";
             label6.RightToLeft = RightToLeft.No;
             label6.Size = new Size(108, 20);
@@ -228,14 +228,14 @@
             // prevOrderListBox
             // 
             prevOrderListBox.FormattingEnabled = true;
-            prevOrderListBox.Location = new Point(379, 693);
+            prevOrderListBox.Location = new Point(320, 693);
             prevOrderListBox.Name = "prevOrderListBox";
-            prevOrderListBox.Size = new Size(153, 104);
+            prevOrderListBox.Size = new Size(302, 104);
             prevOrderListBox.TabIndex = 10;
             // 
             // addToOrderButton
             // 
-            addToOrderButton.Location = new Point(379, 803);
+            addToOrderButton.Location = new Point(468, 803);
             addToOrderButton.Name = "addToOrderButton";
             addToOrderButton.Size = new Size(153, 29);
             addToOrderButton.TabIndex = 11;
@@ -247,7 +247,7 @@
             // 
             mainLabel.AutoSize = true;
             mainLabel.Font = new Font("Segoe UI", 12F);
-            mainLabel.Location = new Point(12, 82);
+            mainLabel.Location = new Point(57, 82);
             mainLabel.Name = "mainLabel";
             mainLabel.Size = new Size(56, 28);
             mainLabel.TabIndex = 12;
@@ -257,7 +257,7 @@
             // 
             sidesLabel.AutoSize = true;
             sidesLabel.Font = new Font("Segoe UI", 12F);
-            sidesLabel.Location = new Point(11, 229);
+            sidesLabel.Location = new Point(57, 229);
             sidesLabel.Name = "sidesLabel";
             sidesLabel.Size = new Size(58, 28);
             sidesLabel.TabIndex = 14;
@@ -272,46 +272,70 @@
             sidesTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             sidesTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             sidesTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            sidesTable.Controls.Add(label12, 3, 0);
-            sidesTable.Controls.Add(label10, 2, 0);
-            sidesTable.Controls.Add(label9, 1, 0);
-            sidesTable.Controls.Add(label8, 0, 0);
-            sidesTable.Location = new Point(11, 260);
+            sidesTable.Controls.Add(sideitem8, 3, 0);
+            sidesTable.Controls.Add(sideitem7, 2, 0);
+            sidesTable.Controls.Add(sideitem6, 1, 0);
+            sidesTable.Controls.Add(sideitem5, 0, 0);
+            sidesTable.Location = new Point(57, 260);
             sidesTable.Name = "sidesTable";
             sidesTable.RowCount = 1;
             sidesTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            sidesTable.Size = new Size(520, 113);
+            sidesTable.Size = new Size(521, 113);
             sidesTable.TabIndex = 13;
             // 
-            // label9
+            // sideitem8
             // 
-            label9.AutoSize = true;
-            label9.Dock = DockStyle.Fill;
-            label9.Location = new Point(134, 2);
-            label9.Name = "label9";
-            label9.Size = new Size(121, 109);
-            label9.TabIndex = 2;
-            label9.Text = "Salad - $4.99";
-            label9.TextAlign = ContentAlignment.MiddleCenter;
-            label9.Click += label2_Click_1;
+            sideitem8.AutoSize = true;
+            sideitem8.Dock = DockStyle.Fill;
+            sideitem8.Location = new Point(392, 2);
+            sideitem8.Name = "sideitem8";
+            sideitem8.Size = new Size(124, 109);
+            sideitem8.TabIndex = 4;
+            sideitem8.Text = "Chips - $3.99";
+            sideitem8.TextAlign = ContentAlignment.MiddleCenter;
+            sideitem8.Click += label2_Click_1;
             // 
-            // label8
+            // sideitem7
             // 
-            label8.AutoSize = true;
-            label8.Dock = DockStyle.Fill;
-            label8.Location = new Point(5, 2);
-            label8.Name = "label8";
-            label8.Size = new Size(121, 109);
-            label8.TabIndex = 1;
-            label8.Text = "Mozzarella Sticks - $6.99";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
-            label8.Click += label2_Click_1;
+            sideitem7.AutoSize = true;
+            sideitem7.Dock = DockStyle.Fill;
+            sideitem7.Location = new Point(263, 2);
+            sideitem7.Name = "sideitem7";
+            sideitem7.Size = new Size(121, 109);
+            sideitem7.TabIndex = 3;
+            sideitem7.Text = "French Fries - $3.99";
+            sideitem7.TextAlign = ContentAlignment.MiddleCenter;
+            sideitem7.Click += label2_Click_1;
+            // 
+            // sideitem6
+            // 
+            sideitem6.AutoSize = true;
+            sideitem6.Dock = DockStyle.Fill;
+            sideitem6.Location = new Point(134, 2);
+            sideitem6.Name = "sideitem6";
+            sideitem6.Size = new Size(121, 109);
+            sideitem6.TabIndex = 2;
+            sideitem6.Text = "Salad - $4.99";
+            sideitem6.TextAlign = ContentAlignment.MiddleCenter;
+            sideitem6.Click += label2_Click_1;
+            // 
+            // sideitem5
+            // 
+            sideitem5.AutoSize = true;
+            sideitem5.Dock = DockStyle.Fill;
+            sideitem5.Location = new Point(5, 2);
+            sideitem5.Name = "sideitem5";
+            sideitem5.Size = new Size(121, 109);
+            sideitem5.TabIndex = 1;
+            sideitem5.Text = "Mozzarella Sticks - $6.99";
+            sideitem5.TextAlign = ContentAlignment.MiddleCenter;
+            sideitem5.Click += label2_Click_1;
             // 
             // drinksLabel
             // 
             drinksLabel.AutoSize = true;
             drinksLabel.Font = new Font("Segoe UI", 12F);
-            drinksLabel.Location = new Point(11, 376);
+            drinksLabel.Location = new Point(57, 376);
             drinksLabel.Name = "drinksLabel";
             drinksLabel.Size = new Size(67, 28);
             drinksLabel.TabIndex = 16;
@@ -326,22 +350,70 @@
             drinksTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             drinksTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             drinksTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            drinksTable.Controls.Add(label16, 3, 0);
-            drinksTable.Controls.Add(label15, 2, 0);
-            drinksTable.Controls.Add(label14, 1, 0);
-            drinksTable.Controls.Add(label13, 0, 0);
-            drinksTable.Location = new Point(11, 407);
+            drinksTable.Controls.Add(drinkItem12, 3, 0);
+            drinksTable.Controls.Add(drinkItem11, 2, 0);
+            drinksTable.Controls.Add(drinkItem10, 1, 0);
+            drinksTable.Controls.Add(drinkItem9, 0, 0);
+            drinksTable.Location = new Point(57, 407);
             drinksTable.Name = "drinksTable";
             drinksTable.RowCount = 1;
             drinksTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            drinksTable.Size = new Size(520, 113);
+            drinksTable.Size = new Size(521, 113);
             drinksTable.TabIndex = 15;
+            // 
+            // drinkItem12
+            // 
+            drinkItem12.AutoSize = true;
+            drinkItem12.Dock = DockStyle.Fill;
+            drinkItem12.Location = new Point(392, 2);
+            drinkItem12.Name = "drinkItem12";
+            drinkItem12.Size = new Size(124, 109);
+            drinkItem12.TabIndex = 6;
+            drinkItem12.Text = "Water - FREE";
+            drinkItem12.TextAlign = ContentAlignment.MiddleCenter;
+            drinkItem12.Click += label2_Click_1;
+            // 
+            // drinkItem11
+            // 
+            drinkItem11.AutoSize = true;
+            drinkItem11.Dock = DockStyle.Fill;
+            drinkItem11.Location = new Point(263, 2);
+            drinkItem11.Name = "drinkItem11";
+            drinkItem11.Size = new Size(121, 109);
+            drinkItem11.TabIndex = 5;
+            drinkItem11.Text = "Iced Tea - $3.49";
+            drinkItem11.TextAlign = ContentAlignment.MiddleCenter;
+            drinkItem11.Click += label2_Click_1;
+            // 
+            // drinkItem10
+            // 
+            drinkItem10.AutoSize = true;
+            drinkItem10.Dock = DockStyle.Fill;
+            drinkItem10.Location = new Point(134, 2);
+            drinkItem10.Name = "drinkItem10";
+            drinkItem10.Size = new Size(121, 109);
+            drinkItem10.TabIndex = 4;
+            drinkItem10.Text = "Coke - $2.99";
+            drinkItem10.TextAlign = ContentAlignment.MiddleCenter;
+            drinkItem10.Click += label2_Click_1;
+            // 
+            // drinkItem9
+            // 
+            drinkItem9.AutoSize = true;
+            drinkItem9.Dock = DockStyle.Fill;
+            drinkItem9.Location = new Point(5, 2);
+            drinkItem9.Name = "drinkItem9";
+            drinkItem9.Size = new Size(121, 109);
+            drinkItem9.TabIndex = 3;
+            drinkItem9.Text = "Pepsi - $2.99";
+            drinkItem9.TextAlign = ContentAlignment.MiddleCenter;
+            drinkItem9.Click += label2_Click_1;
             // 
             // dessertLabel
             // 
             dessertLabel.AutoSize = true;
             dessertLabel.Font = new Font("Segoe UI", 12F);
-            dessertLabel.Location = new Point(11, 523);
+            dessertLabel.Location = new Point(57, 523);
             dessertLabel.Name = "dessertLabel";
             dessertLabel.Size = new Size(76, 28);
             dessertLabel.TabIndex = 18;
@@ -356,153 +428,81 @@
             dessertTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             dessertTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             dessertTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            dessertTable.Controls.Add(label20, 3, 0);
-            dessertTable.Controls.Add(label19, 2, 0);
-            dessertTable.Controls.Add(label18, 1, 0);
-            dessertTable.Controls.Add(label17, 0, 0);
-            dessertTable.Location = new Point(11, 554);
+            dessertTable.Controls.Add(dessertItem16, 3, 0);
+            dessertTable.Controls.Add(dessertItem15, 2, 0);
+            dessertTable.Controls.Add(dessertItem14, 1, 0);
+            dessertTable.Controls.Add(dessertItem13, 0, 0);
+            dessertTable.Location = new Point(57, 554);
             dessertTable.Name = "dessertTable";
             dessertTable.RowCount = 1;
             dessertTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            dessertTable.Size = new Size(520, 113);
+            dessertTable.Size = new Size(521, 113);
             dessertTable.TabIndex = 17;
+            // 
+            // dessertItem16
+            // 
+            dessertItem16.AutoSize = true;
+            dessertItem16.Dock = DockStyle.Fill;
+            dessertItem16.Location = new Point(392, 2);
+            dessertItem16.Name = "dessertItem16";
+            dessertItem16.Size = new Size(124, 109);
+            dessertItem16.TabIndex = 7;
+            dessertItem16.Text = "Fried Dough - $7.99";
+            dessertItem16.TextAlign = ContentAlignment.MiddleCenter;
+            dessertItem16.Click += label2_Click_1;
+            // 
+            // dessertItem15
+            // 
+            dessertItem15.AutoSize = true;
+            dessertItem15.Dock = DockStyle.Fill;
+            dessertItem15.Location = new Point(263, 2);
+            dessertItem15.Name = "dessertItem15";
+            dessertItem15.Size = new Size(121, 109);
+            dessertItem15.TabIndex = 6;
+            dessertItem15.Text = "Cookie - $3.99";
+            dessertItem15.TextAlign = ContentAlignment.MiddleCenter;
+            dessertItem15.Click += label2_Click_1;
+            // 
+            // dessertItem14
+            // 
+            dessertItem14.AutoSize = true;
+            dessertItem14.Dock = DockStyle.Fill;
+            dessertItem14.Location = new Point(134, 2);
+            dessertItem14.Name = "dessertItem14";
+            dessertItem14.Size = new Size(121, 109);
+            dessertItem14.TabIndex = 5;
+            dessertItem14.Text = "Soft Serve Ice Cream - $4.49";
+            dessertItem14.TextAlign = ContentAlignment.MiddleCenter;
+            dessertItem14.Click += label2_Click_1;
+            // 
+            // dessertItem13
+            // 
+            dessertItem13.AutoSize = true;
+            dessertItem13.Dock = DockStyle.Fill;
+            dessertItem13.Location = new Point(5, 2);
+            dessertItem13.Name = "dessertItem13";
+            dessertItem13.Size = new Size(121, 109);
+            dessertItem13.TabIndex = 4;
+            dessertItem13.Text = "Apple Pie - $6.99";
+            dessertItem13.TextAlign = ContentAlignment.MiddleCenter;
+            dessertItem13.Click += label2_Click_1;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label11.ForeColor = SystemColors.GrayText;
-            label11.Location = new Point(171, 9);
+            label11.Location = new Point(216, 9);
             label11.Name = "label11";
             label11.Size = new Size(327, 20);
             label11.TabIndex = 19;
             label11.Text = "(This will be used to save your order for next time)";
             // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Dock = DockStyle.Fill;
-            label10.Location = new Point(263, 2);
-            label10.Name = "label10";
-            label10.Size = new Size(121, 109);
-            label10.TabIndex = 3;
-            label10.Text = "Fries - $3.99";
-            label10.TextAlign = ContentAlignment.MiddleCenter;
-            label10.Click += label2_Click_1;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Dock = DockStyle.Fill;
-            label12.Location = new Point(392, 2);
-            label12.Name = "label12";
-            label12.Size = new Size(123, 109);
-            label12.TabIndex = 4;
-            label12.Text = "Chips - $3.99";
-            label12.TextAlign = ContentAlignment.MiddleCenter;
-            label12.Click += label2_Click_1;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Dock = DockStyle.Fill;
-            label13.Location = new Point(5, 2);
-            label13.Name = "label13";
-            label13.Size = new Size(121, 109);
-            label13.TabIndex = 3;
-            label13.Text = "Pepsi - $2.99";
-            label13.TextAlign = ContentAlignment.MiddleCenter;
-            label13.Click += label2_Click_1;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Dock = DockStyle.Fill;
-            label14.Location = new Point(134, 2);
-            label14.Name = "label14";
-            label14.Size = new Size(121, 109);
-            label14.TabIndex = 4;
-            label14.Text = "Coke - $2.99";
-            label14.TextAlign = ContentAlignment.MiddleCenter;
-            label14.Click += label2_Click_1;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Dock = DockStyle.Fill;
-            label15.Location = new Point(263, 2);
-            label15.Name = "label15";
-            label15.Size = new Size(121, 109);
-            label15.TabIndex = 5;
-            label15.Text = "Iced Tea - $3.49";
-            label15.TextAlign = ContentAlignment.MiddleCenter;
-            label15.Click += label2_Click_1;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Dock = DockStyle.Fill;
-            label16.Location = new Point(392, 2);
-            label16.Name = "label16";
-            label16.Size = new Size(123, 109);
-            label16.TabIndex = 6;
-            label16.Text = "Water - FREE";
-            label16.TextAlign = ContentAlignment.MiddleCenter;
-            label16.Click += label2_Click_1;
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Dock = DockStyle.Fill;
-            label17.Location = new Point(5, 2);
-            label17.Name = "label17";
-            label17.Size = new Size(121, 109);
-            label17.TabIndex = 4;
-            label17.Text = "Apple Pie - $6.99";
-            label17.TextAlign = ContentAlignment.MiddleCenter;
-            label17.Click += label2_Click_1;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Dock = DockStyle.Fill;
-            label18.Location = new Point(134, 2);
-            label18.Name = "label18";
-            label18.Size = new Size(121, 109);
-            label18.TabIndex = 5;
-            label18.Text = "Soft Serve Ice Cream - $4.49";
-            label18.TextAlign = ContentAlignment.MiddleCenter;
-            label18.Click += label2_Click_1;
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Dock = DockStyle.Fill;
-            label19.Location = new Point(263, 2);
-            label19.Name = "label19";
-            label19.Size = new Size(121, 109);
-            label19.TabIndex = 6;
-            label19.Text = "Cookie - $3.99";
-            label19.TextAlign = ContentAlignment.MiddleCenter;
-            label19.Click += label2_Click_1;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Dock = DockStyle.Fill;
-            label20.Location = new Point(392, 2);
-            label20.Name = "label20";
-            label20.Size = new Size(123, 109);
-            label20.TabIndex = 7;
-            label20.Text = "Fried Dough - $7.99";
-            label20.TextAlign = ContentAlignment.MiddleCenter;
-            label20.Click += label2_Click_1;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(544, 889);
+            ClientSize = new Size(634, 889);
             Controls.Add(label11);
             Controls.Add(dessertLabel);
             Controls.Add(dessertTable);
@@ -559,21 +559,21 @@
         private Label dessertLabel;
         private TableLayoutPanel dessertTable;
         private Label label11;
+        private Label mainitem4;
+        private Label mainitem3;
+        private Label mainitem2;
+        private Label sideitem6;
+        private Label sideitem8;
+        private Label sideitem7;
+        private Label drinkItem12;
+        private Label drinkItem11;
+        private Label drinkItem10;
+        private Label dessertItem16;
+        private Label dessertItem15;
+        private Label dessertItem14;
+        private Label sideitem5;
+        private Label dessertItem13;
         private Label mainItem1;
-        private Label label7;
-        private Label label5;
-        private Label label2;
-        private Label label9;
-        private Label label8;
-        private Label label12;
-        private Label label10;
-        private Label label16;
-        private Label label15;
-        private Label label14;
-        private Label label13;
-        private Label label17;
-        private Label label20;
-        private Label label19;
-        private Label label18;
+        private Label drinkItem9;
     }
 }

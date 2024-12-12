@@ -10,7 +10,14 @@ namespace RitchiesFastFood_FinalProj
         }
 
         //variable for displaying the total price at the bottom of the form
-        public double totalCash = 0.00;
+        public decimal totalCash = 0.00m;
+
+        //arrays for item names, prices, and sugar/calorie conts.
+        string[] itemNames = {"Pizza", "Burger", "Hot Dog", "Taco", "Mozz. Sticks", "Salad", "Fries", "Chips", "Pepsi", "Coke", "Iced Tea", "Water", "Pie", "Ice Cream", "Cookie", "F. Dough"};
+
+        decimal[] itemPrices = {10.99m, 13.99m, 4.99m, 9.99m, 6.99m, 4.99m, 3.99m, 3.99m, 2.99m, 2.99m, 3.49m, 0.00m, 6.99m, 4.49m, 3.99m, 7.99m};
+
+        int[] sugCal = {285, 354, 151, 156, 370, 150, 365, 304, 40, 39, 22, 0, 248, 382, 142, 274};
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -42,16 +49,26 @@ namespace RitchiesFastFood_FinalProj
 
             if (clickedLabel != null)
             {
+                string labelName = clickedLabel.Name.Substring(clickedLabel.Name.IndexOf("tem") + 3);
+                int labelIndex = int.Parse(labelName) - 1;
+
                 //adds the clicked item to the current order listbox
-                itemsListBox.Items.Add(clickedLabel.Text);
+
+                if (clickedLabel.Name == "drinkItem" + labelName)
+                {
+                    itemsListBox.Items.Add(new Drink(itemNames[labelIndex], itemPrices[labelIndex], sugCal[labelIndex]));
+                } else
+                {
+                    itemsListBox.Items.Add(new Food(itemNames[labelIndex], itemPrices[labelIndex], sugCal[labelIndex]));
+                }
 
                 //(placeholder for getting the price from the selected item);
 
                 //(placeholder for adding that value to totalCash);
-            }
 
-            //updates the displayed total price
-            totalIntLabel.Text = $"${totalCash}";
+                //updates the displayed total price
+                totalIntLabel.Text = $"${totalCash}";
+            }
         }
 
         private void itemsListBox_SelectedIndexChanged(object sender, EventArgs e)
