@@ -26,9 +26,6 @@ namespace RitchiesFastFood_FinalProj
             {
                 itemsListBox.Items.Add(i);
             };
-
-            //disables the button
-            addToOrderButton.Enabled = false;
         }
 
         private void mainTable_Paint(object sender, PaintEventArgs e)
@@ -48,11 +45,13 @@ namespace RitchiesFastFood_FinalProj
 
         private void itemsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //removes the selected item in the current order listbox
             if (itemsListBox.SelectedIndex > -1)
             {
                 itemsListBox.Items.RemoveAt(itemsListBox.SelectedIndex);
             };
 
+            //clears selection
             itemsListBox.ClearSelected();
         }
     }
