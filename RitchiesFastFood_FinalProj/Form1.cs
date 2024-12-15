@@ -107,7 +107,7 @@ namespace RitchiesFastFood_FinalProj
         {
             // create a file at pathName
             string username =  nameTextBox.Text;
-            FileStream user = File.Create("${username}.txt");
+            FileStream user = File.Create($"{username}.txt");
         }
     }
 }
