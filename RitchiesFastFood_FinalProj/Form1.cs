@@ -43,15 +43,7 @@ namespace RitchiesFastFood_FinalProj
 
         }
 
-        private void addToOrderButton_Click(object sender, EventArgs e)
-        {
-
-            //iterates over every item in previous order and adds them to current order
-            foreach (string i in prevOrderListBox.Items)
-            {
-                itemsListBox.Items.Add(i);
-            };
-        }
+        
 
         private void mainTable_Paint(object sender, PaintEventArgs e)
         {
@@ -118,13 +110,14 @@ namespace RitchiesFastFood_FinalProj
         private void nameTextBox_TextChanged(object sender, EventArgs e)
         {
             // create a file
+
             username = nameTextBox.Text;
             if (File.Exists($"{username}.txt"))
             {
                 using (StreamReader sr = new StreamReader($"{username}.txt"))
                 {
-                    // load previous data into user name and player score variables 
-                    prevOrderListBox.Items.Add(sr.ReadLine());
+                    // load previous data into user name and 
+                   
 
                 }
             }
@@ -223,16 +216,16 @@ namespace RitchiesFastFood_FinalProj
             drinksTable.Visible = false;
             dessertTable.Visible = false;
             itemsListBox.Visible = false;
-            addToOrderButton.Visible = false;
+          
             checkoutButton.Visible = false;
             totalIntLabel.Visible = false;
-            prevOrderListBox.Visible = false;
+
             mainLabel.Visible = false;
             sidesLabel.Visible = false;
             drinksLabel.Visible = false;
             dessertLabel.Visible = false;
             label4.Visible = false;
-            label6.Visible = false;
+          
             label3.Visible = false;
             selectItemLabel.Visible = false;
         }
@@ -245,16 +238,16 @@ namespace RitchiesFastFood_FinalProj
             drinksTable.Visible = true;
             dessertTable.Visible = true;
             itemsListBox.Visible = true;
-            addToOrderButton.Visible = true;
+         
             checkoutButton.Visible = true;
             totalIntLabel.Visible = true;
-            prevOrderListBox.Visible = true;
+            
             mainLabel.Visible = true;
             sidesLabel.Visible = true;
             drinksLabel.Visible = true;
             dessertLabel.Visible = true;
             label4.Visible = true;
-            label6.Visible = true;
+          
             label3.Visible = true;
             selectItemLabel.Visible = true;
         }
