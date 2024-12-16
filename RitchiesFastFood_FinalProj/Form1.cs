@@ -164,9 +164,16 @@ namespace RitchiesFastFood_FinalProj
                 HideMainUI();//make sure the interface is still hidden
             }
 
-            using (StreamWriter sw = new StreamWriter("username.txt"))
+            try
             {
-                sw.WriteLine(pass);
+                using (StreamWriter sw = new StreamWriter("username.txt", append: true))
+                {
+                    sw.WriteLine(pass);
+                }
+            }
+            catch (Exception e)//if the contents cannot be written to the file
+            {
+                MessageBox.Show($"Error writing to file: {ex.Message}");
             }
         }
 
