@@ -22,8 +22,6 @@ namespace RitchiesFastFood_FinalProj
         int[] sugCal = { 285, 354, 151, 156, 370, 150, 365, 304, 40, 39, 22, 0, 248, 382, 142, 274 };
 
 
-       //delete just this comment later
-
         private void label1_Click(object sender, EventArgs e)
         {
 
