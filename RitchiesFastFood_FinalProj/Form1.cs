@@ -170,7 +170,7 @@ namespace RitchiesFastFood_FinalProj
         }
 
         //click handler for signup button
-        private void btnSignUp_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             string username = nameTextBox.Text;
             string password = textBox1.Text;
@@ -190,39 +190,39 @@ namespace RitchiesFastFood_FinalProj
 
         //function to hide all the ui other than the login textboxes/buttons/etc
         private void HideMainUI()
-            {
-                itemsListBox.Visible = false;
-                addToOrderButton.Visible = false;
-                checkoutButton.Visible = false;
-                totalIntLabel.Visible = false;
-                prevOrderListBox.Visible = false;
-                nameTextBox.Visible = false;
-                mainItem1.Visible = false;
-                mainItem1.Visible = false;
-                mainItem1.Visible = false;
-                mainItem1.Visible = false;
-                mainLabel.Visible = false;
-                mainTable.Visible = false;
-            }
+        {
+            mainTable.Visible = false;
+            sidesTable.Visible = false;
+            drinksTable.Visible = false;
+            dessertTable.Visible = false;
+            itemsListBox.Visible = false;
+            addToOrderButton.Visible = false;
+            checkoutButton.Visible = false;
+            totalIntLabel.Visible = false;
+            prevOrderListBox.Visible = false;
+            mainLabel.Visible = false;
+            sidesLabel.Visible = false;
+            drinksLabel.Visible = false;
+            dessertLabel.Visible = false;
+        }
 
-            //show all the ui items that were initially hidden (everything except login)
-            private void ShowMainUI()
-            {
-                itemsListBox.Visible = true;
-                addToOrderButton.Visible = true;
-                checkoutButton.Visible = true;
-                totalIntLabel.Visible = true;
-                prevOrderListBox.Visible = true;
-                nameTextBox.Visible = true;
-                mainItem1.Visible = true;
-                mainItem2.Visible = true;
-                mainItem3.Visible = true;
-                mainItem4.Visible = true;
-                mainLabel.Visible = true;
-                mainTable.Visible = true;
-
-            }
-    }
+        //show all the ui items that were initially hidden (everything except login)
+        private void ShowMainUI()
+        {
+            mainTable.Visible = true;
+            sidesTable.Visible = true;
+            drinksTable.Visible = true;
+            dessertTable.Visible = true;
+            itemsListBox.Visible = true;
+            addToOrderButton.Visible = true;
+            checkoutButton.Visible = true;
+            totalIntLabel.Visible = true;
+            prevOrderListBox.Visible = true;
+            mainLabel.Visible = true;
+            sidesLabel.Visible = true;
+            drinksLabel.Visible = true;
+            dessertLabel.Visible = true;
+        }
     }
 }
 
