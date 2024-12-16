@@ -90,7 +90,7 @@
             // nameTextBox
             // 
             nameTextBox.Location = new Point(72, 95);
-            nameTextBox.Margin = new Padding(4, 4, 4, 4);
+            nameTextBox.Margin = new Padding(4);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.Size = new Size(156, 31);
             nameTextBox.TabIndex = 1;
@@ -121,7 +121,7 @@
             mainTable.Controls.Add(mainitem2, 1, 0);
             mainTable.Controls.Add(mainItem1, 0, 0);
             mainTable.Location = new Point(72, 234);
-            mainTable.Margin = new Padding(4, 4, 4, 4);
+            mainTable.Margin = new Padding(4);
             mainTable.Name = "mainTable";
             mainTable.RowCount = 1;
             mainTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -185,8 +185,8 @@
             // 
             itemsListBox.FormattingEnabled = true;
             itemsListBox.ItemHeight = 25;
-            itemsListBox.Location = new Point(15, 959);
-            itemsListBox.Margin = new Padding(4, 4, 4, 4);
+            itemsListBox.Location = new Point(342, 805);
+            itemsListBox.Margin = new Padding(4);
             itemsListBox.Name = "itemsListBox";
             itemsListBox.Size = new Size(374, 129);
             itemsListBox.TabIndex = 4;
@@ -196,7 +196,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(14, 933);
+            label3.Location = new Point(341, 779);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.RightToLeft = RightToLeft.No;
@@ -207,7 +207,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(14, 1094);
+            label4.Location = new Point(341, 940);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(53, 25);
@@ -218,7 +218,7 @@
             // 
             totalIntLabel.AutoSize = true;
             totalIntLabel.Font = new Font("Segoe UI", 12F);
-            totalIntLabel.Location = new Point(15, 1119);
+            totalIntLabel.Location = new Point(342, 965);
             totalIntLabel.Margin = new Padding(4, 0, 4, 0);
             totalIntLabel.Name = "totalIntLabel";
             totalIntLabel.Size = new Size(71, 32);
@@ -228,8 +228,8 @@
             // 
             // checkoutButton
             // 
-            checkoutButton.Location = new Point(15, 1155);
-            checkoutButton.Margin = new Padding(4, 4, 4, 4);
+            checkoutButton.Location = new Point(342, 1001);
+            checkoutButton.Margin = new Padding(4);
             checkoutButton.Name = "checkoutButton";
             checkoutButton.Size = new Size(192, 36);
             checkoutButton.TabIndex = 8;
@@ -240,7 +240,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(585, 933);
+            label6.Location = new Point(912, 779);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.RightToLeft = RightToLeft.No;
@@ -253,8 +253,8 @@
             // 
             prevOrderListBox.FormattingEnabled = true;
             prevOrderListBox.ItemHeight = 25;
-            prevOrderListBox.Location = new Point(400, 959);
-            prevOrderListBox.Margin = new Padding(4, 4, 4, 4);
+            prevOrderListBox.Location = new Point(727, 805);
+            prevOrderListBox.Margin = new Padding(4);
             prevOrderListBox.Name = "prevOrderListBox";
             prevOrderListBox.Size = new Size(376, 129);
             prevOrderListBox.TabIndex = 10;
@@ -262,8 +262,8 @@
             // 
             // addToOrderButton
             // 
-            addToOrderButton.Location = new Point(585, 1098);
-            addToOrderButton.Margin = new Padding(4, 4, 4, 4);
+            addToOrderButton.Location = new Point(912, 944);
+            addToOrderButton.Margin = new Padding(4);
             addToOrderButton.Name = "addToOrderButton";
             addToOrderButton.Size = new Size(192, 36);
             addToOrderButton.TabIndex = 11;
@@ -286,7 +286,7 @@
             // 
             sidesLabel.AutoSize = true;
             sidesLabel.Font = new Font("Segoe UI", 12F);
-            sidesLabel.Location = new Point(72, 380);
+            sidesLabel.Location = new Point(764, 197);
             sidesLabel.Margin = new Padding(4, 0, 4, 0);
             sidesLabel.Name = "sidesLabel";
             sidesLabel.Size = new Size(70, 32);
@@ -306,8 +306,8 @@
             sidesTable.Controls.Add(sideitem7, 2, 0);
             sidesTable.Controls.Add(sideitem6, 1, 0);
             sidesTable.Controls.Add(sideitem5, 0, 0);
-            sidesTable.Location = new Point(72, 419);
-            sidesTable.Margin = new Padding(4, 4, 4, 4);
+            sidesTable.Location = new Point(764, 236);
+            sidesTable.Margin = new Padding(4);
             sidesTable.Name = "sidesTable";
             sidesTable.RowCount = 1;
             sidesTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -391,7 +391,7 @@
             drinksTable.Controls.Add(drinkItem10, 1, 0);
             drinksTable.Controls.Add(drinkItem9, 0, 0);
             drinksTable.Location = new Point(72, 604);
-            drinksTable.Margin = new Padding(4, 4, 4, 4);
+            drinksTable.Margin = new Padding(4);
             drinksTable.Name = "drinksTable";
             drinksTable.RowCount = 1;
             drinksTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -454,7 +454,7 @@
             // 
             dessertLabel.AutoSize = true;
             dessertLabel.Font = new Font("Segoe UI", 12F);
-            dessertLabel.Location = new Point(72, 748);
+            dessertLabel.Location = new Point(764, 564);
             dessertLabel.Margin = new Padding(4, 0, 4, 0);
             dessertLabel.Name = "dessertLabel";
             dessertLabel.Size = new Size(93, 32);
@@ -474,8 +474,8 @@
             dessertTable.Controls.Add(dessertItem15, 2, 0);
             dessertTable.Controls.Add(dessertItem14, 1, 0);
             dessertTable.Controls.Add(dessertItem13, 0, 0);
-            dessertTable.Location = new Point(72, 786);
-            dessertTable.Margin = new Padding(4, 4, 4, 4);
+            dessertTable.Location = new Point(764, 602);
+            dessertTable.Margin = new Padding(4);
             dessertTable.Name = "dessertTable";
             dessertTable.RowCount = 1;
             dessertTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -560,7 +560,7 @@
             // textBox1
             // 
             textBox1.Location = new Point(238, 95);
-            textBox1.Margin = new Padding(4, 4, 4, 4);
+            textBox1.Margin = new Padding(4);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(156, 31);
             textBox1.TabIndex = 21;
@@ -579,7 +579,7 @@
             // button1
             // 
             button1.Location = new Point(72, 131);
-            button1.Margin = new Padding(4, 4, 4, 4);
+            button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(118, 36);
             button1.TabIndex = 23;
@@ -590,7 +590,7 @@
             // button2
             // 
             button2.Location = new Point(284, 131);
-            button2.Margin = new Padding(2, 2, 2, 2);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(105, 37);
             button2.TabIndex = 24;
@@ -602,7 +602,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(792, 1196);
+            ClientSize = new Size(1432, 1196);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label5);
@@ -628,7 +628,7 @@
             Controls.Add(selectItemLabel);
             Controls.Add(nameTextBox);
             Controls.Add(label1);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Form1";
             Text = "Ritchie's Fast Food Online Menu";
             mainTable.ResumeLayout(false);
