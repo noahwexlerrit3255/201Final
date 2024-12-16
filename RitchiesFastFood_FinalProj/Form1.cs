@@ -108,8 +108,15 @@ namespace RitchiesFastFood_FinalProj
         {
             // create a file
             username = nameTextBox.Text;
-            
-        }
+            if (File.Exists($"{username}.txt"))
+            {
+                using (StreamReader sr = new StreamReader($"{username}.txt"))
+                {
+                    // load previous data into user name and player score variables 
+                    prevOrderListBox.Text += sr.ReadLine();
+                }
+            }
+        } 
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
