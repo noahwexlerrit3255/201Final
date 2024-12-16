@@ -151,14 +151,15 @@ namespace RitchiesFastFood_FinalProj
             string username = nameTextBox.Text;
             string password = TextBox1.Text;
 
+            //if the username and password already exist in the dictionary, meaning the user has signed up
             if (users.ContainsKey(username) && users[username] == password)
             {
-                ShowMainUI();
+                ShowMainUI();//show the rest of the interface
             }
             else
             {
                 //login failed
-                HideMainUI();
+                HideMainUI();//make sure the interface is still hidden
             }
 
             using (StreamWriter sw = new StreamWriter("username.txt"))
@@ -167,16 +168,18 @@ namespace RitchiesFastFood_FinalProj
             }
         }
 
+        //click handler for signup button
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             string username = nameTextBox.Text;
             string password = TextBox1.Text;
 
-            //add new username and password pair
+            //add new username and password pair to dictionary
             users[username] = password;
             //then user needs to log in to see application
         }
 
+        //function to hide all the ui other than the login textboxes/buttons/etc
         private void HideMainUI()
             {
                 itemsListBox.Visible = false;
@@ -195,6 +198,7 @@ namespace RitchiesFastFood_FinalProj
                 mainTable.Visible = false;
             }
 
+            //show all the ui items that were initially hidden (everything except login)
             private void ShowMainUI()
             {
                 itemsListBox.Visible = false;
