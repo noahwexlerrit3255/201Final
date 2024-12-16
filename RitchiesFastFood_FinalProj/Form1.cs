@@ -21,6 +21,9 @@ namespace RitchiesFastFood_FinalProj
             HideMainUI();
         }
 
+        string username;
+        string password;
+
         //variable for displaying the total price at the bottom of the form
         public decimal totalCash = 0.00m;
         //arrays for item names, prices, and sugar/calorie conts.
@@ -137,7 +140,7 @@ namespace RitchiesFastFood_FinalProj
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           pass = textBox1.Text;
+           password = textBox1.Text;
 
         }
 
@@ -150,8 +153,8 @@ namespace RitchiesFastFood_FinalProj
         //checks if the username and password given exist in dictionary
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = nameTextBox.Text;
-            string password = textBox1.Text;
+            username = nameTextBox.Text;
+            password = textBox1.Text;
 
             //if the username and password already exist in the dictionary, meaning the user has signed up
             if (users.ContainsKey(username) && users[username] == password)
@@ -169,10 +172,10 @@ namespace RitchiesFastFood_FinalProj
             {
                 using (StreamWriter sw = new StreamWriter("username.txt", append: true))
                 {
-                    sw.WriteLine(pass);
+                    sw.WriteLine($"{username}:{password}");
                 }
             }
-            catch (Exception e)//if the contents cannot be written to the file
+            catch (Exception ex)//if the contents cannot be written to the file
             {
                 MessageBox.Show($"Error writing to file: {ex.Message}");
             }
@@ -181,8 +184,8 @@ namespace RitchiesFastFood_FinalProj
         //click handler for signup button
         private void button2_Click(object sender, EventArgs e)
         {
-            string username = nameTextBox.Text;
-            string password = textBox1.Text;
+            username = nameTextBox.Text;
+            password = textBox1.Text;
 
             //can't have an empty username or password
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
@@ -288,7 +291,7 @@ namespace RitchiesFastFood_FinalProj
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading user data: {ex.Message}");
-                users = new Dictionary<string, string>(); // Fallback to an empty dictionary
+                users = new Dictionary<string, string>();//empty dictionary instead if file can't be loaded
             }
         }
 
