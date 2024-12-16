@@ -15,19 +15,17 @@ namespace RitchiesFastFood_FinalProj
         public Form1()
         {
             InitializeComponent();
-            ShowMainUI();
+            HideMainUI();
         }
 
         //variable for displaying the total price at the bottom of the form
         public decimal totalCash = 0.00m;
-        string username;
         //arrays for item names, prices, and sugar/calorie conts.
         string[] itemNames = { "Pizza", "Burger", "Hot Dog", "Taco", "Mozz. Sticks", "Salad", "Fries", "Chips", "Pepsi", "Coke", "Iced Tea", "Water", "Pie", "Ice Cream", "Cookie", "F. Dough" };
 
         decimal[] itemPrices = { 10.99m, 13.99m, 4.99m, 9.99m, 6.99m, 4.99m, 3.99m, 3.99m, 2.99m, 2.99m, 3.49m, 0.00m, 6.99m, 4.49m, 3.99m, 7.99m };
 
         int[] sugCal = { 285, 354, 151, 156, 370, 150, 365, 304, 40, 39, 22, 0, 248, 382, 142, 274 };
-        string pass;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -120,7 +118,8 @@ namespace RitchiesFastFood_FinalProj
                 using (StreamReader sr = new StreamReader($"{username}.txt"))
                 {
                     // load previous data into user name and player score variables 
-                    prevOrderListBox.Text += sr.ReadLine();
+                    prevOrderListBox.Items.Add(sr.ReadLine());
+
                 }
             }
         }
@@ -174,8 +173,14 @@ namespace RitchiesFastFood_FinalProj
         {
             string username = nameTextBox.Text;
             string password = textBox1.Text;
-            
-            if (users.ContainsKey(username))
+
+            //can't have an empty username or password
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Username and password cannot be empty.");
+                return;
+            }
+            else if (users.ContainsKey(username))
             {
                 //make sure existing usernames can't be chosen
                 MessageBox.Show("Username already exists. Please choose a different one.");
@@ -222,6 +227,21 @@ namespace RitchiesFastFood_FinalProj
             sidesLabel.Visible = true;
             drinksLabel.Visible = true;
             dessertLabel.Visible = true;
+        }
+
+        //save usernames+passwords dictionary to file
+        private void SaveUsers()
+        {
+            File.WriteAllText("users.json", JsonSerializer.Serialize(users));
+        }
+
+        //load the usernames+passwords dictionary from saved file
+        private void LoadUsers()
+        {
+            if (File.Exists("users.json"))
+            {
+                users = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText("users.json"));
+            }
         }
     }
 }
