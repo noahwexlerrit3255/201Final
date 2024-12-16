@@ -46,7 +46,7 @@ namespace RitchiesFastFood_FinalProj
         decimal[] itemPrices = { 10.99m, 13.99m, 4.99m, 9.99m, 6.99m, 4.99m, 3.99m, 3.99m, 2.99m, 2.99m, 3.49m, 0.00m, 6.99m, 4.49m, 3.99m, 7.99m };
 
         int[] sugCal = { 285, 354, 151, 156, 370, 150, 365, 304, 40, 39, 22, 0, 248, 382, 142, 274 };
-
+        string pass;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -142,28 +142,33 @@ namespace RitchiesFastFood_FinalProj
                     prevOrderListBox.Text += sr.ReadLine();
                 }
             }
-        } 
+        }
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
-            if (!File.Exists($"{username}.txt"))
-            {
-                using (StreamWriter sw = new StreamWriter($"{username}.txt"))
-                {
-                    sw.WriteLine(itemsListBox.Items);
-
-                }
-                
-            }
-            using (StreamReader sr = new StreamReader($"{username}.txt"))
-            {
-                // load previous data into user name and player score variables 
-                prevOrderListBox.Text += sr.ReadLine();
-            }
         }
-            private void itemsListBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void itemsListBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-         
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           pass = textBox1.Text;
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (StreamWriter sw = new StreamWriter("username.txt"))
+            {
+                sw.WriteLine(pass);
+            }
         }
     }
 }
