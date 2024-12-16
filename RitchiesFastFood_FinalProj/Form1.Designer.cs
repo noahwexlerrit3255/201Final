@@ -68,6 +68,7 @@
             textBox1 = new TextBox();
             label5 = new Label();
             button1 = new Button();
+            button2 = new Button();
             mainTable.SuspendLayout();
             sidesTable.SuspendLayout();
             drinksTable.SuspendLayout();
@@ -541,11 +542,21 @@
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            button2.Location = new Point(157, 105);
+            button2.Name = "button2";
+            button2.Size = new Size(159, 29);
+            button2.TabIndex = 24;
+            button2.Text = "Create Account";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(634, 957);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(textBox1);
@@ -626,5 +637,6 @@
         private TextBox textBox1;
         private Label label5;
         private Button button1;
+        private Button button2;
     }
 }
