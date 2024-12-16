@@ -187,6 +187,8 @@ namespace RitchiesFastFood_FinalProj
             username = nameTextBox.Text;
             password = textBox1.Text;
 
+            LoadUsers();//make sure the dictionary is fresh
+
             //can't have an empty username or password
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
@@ -204,6 +206,7 @@ namespace RitchiesFastFood_FinalProj
                 users[username] = password;
                 SaveUsers();//save to file as well
                 //then user needs to log in to see application
+                MessageBox.Show("Your account has been created!");
             }
         }
 
