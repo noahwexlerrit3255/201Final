@@ -129,11 +129,13 @@ namespace RitchiesFastFood_FinalProj
                 }
             }
         }
-
+  
         private void checkoutButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("order successful!");
             itemsListBox.Items.Clear();
+          
+
 
         }
         private void itemsListBox_SelectedIndexChanged_1(object sender, EventArgs e)
