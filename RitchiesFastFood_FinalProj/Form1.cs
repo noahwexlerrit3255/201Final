@@ -118,7 +118,7 @@ namespace RitchiesFastFood_FinalProj
                 sw.WriteLine(itemsListBox.Text);
 
             }
-            using (StreamReader sr = new StreamReader("username.txt"))
+            using (StreamReader sr = new StreamReader(${"username}.txt"))
             {
                 // load previous data into user name and player score variables 
                 prevOrderListBox.Text = sr.ReadToEnd();
