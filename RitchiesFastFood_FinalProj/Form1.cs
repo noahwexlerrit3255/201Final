@@ -15,26 +15,7 @@ namespace RitchiesFastFood_FinalProj
         public Form1()
         {
             InitializeComponent();
-        }
-
-        //click handler for login button
-        //checks if the username and password given exist in dictionary
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            string username = nameTextBox_TextChanged.Text;
-            string password = TextBox_TextChanged.Text;
-
-            if (users.ContainsKey(username) && users[username] == password)
-            {
-                lblError.Text = "Login successful!";
-                lblError.ForeColor = System.Drawing.Color.Green;
-            }
-            else
-            {
-                //login failed
-                lblError.Text = "Invalid username or password Please try again.";
-                lblError.ForeColor = System.Drawing.Color.Red;
-            }
+            ShowMainUI();
         }
 
         //variable for displaying the total price at the bottom of the form
@@ -163,13 +144,65 @@ namespace RitchiesFastFood_FinalProj
 
         }
 
+        //click handler for login button
+        //checks if the username and password given exist in dictionary
         private void button1_Click(object sender, EventArgs e)
         {
+            string username = nameTextBox.Text;
+            string password = TextBox1.Text;
+
+            if (users.ContainsKey(username) && users[username] == password)
+            {
+                ShowMainUI();
+            }
+            else
+            {
+                //login failed
+                HideMainUI();
+            }
+
             using (StreamWriter sw = new StreamWriter("username.txt"))
             {
                 sw.WriteLine(pass);
             }
         }
+
+            private void HideMainUI()
+            {
+                itemsListBox.Visible = false;
+                addToOrderButton.Visible = false;
+                checkoutButton.Visible = false;
+                totalIntLabel.Visible = false;
+                itemNames.Visible = false;
+                itemPrices.Visible = false;
+                prevOrderListBox.Visible = false;
+                nameTextBox.Visible = false;
+                mainItem1.Visible = false;
+                mainItem1.Visible = false;
+                mainItem1.Visible = false;
+                mainItem1.Visible = false;
+                mainLabel.Visible = false;
+                mainTable.Visible = false;
+            }
+
+            private void ShowMainUI()
+            {
+                itemsListBox.Visible = false;
+                addToOrderButton.Visible = false;
+                checkoutButton.Visible = false;
+                totalIntLabel.Visible = false;
+                itemNames.Visible = false;
+                itemPrices.Visible = false;
+                prevOrderListBox.Visible = false;
+                nameTextBox.Visible = false;
+                mainItem1.Visible = false;
+                mainItem1.Visible = false;
+                mainItem1.Visible = false;
+                mainItem1.Visible = false;
+                mainLabel.Visible = false;
+                mainTable.Visible = false;
+            }
+    }
     }
 }
 
