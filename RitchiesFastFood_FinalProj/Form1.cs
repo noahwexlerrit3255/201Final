@@ -13,7 +13,7 @@ namespace RitchiesFastFood_FinalProj
 
         //variable for displaying the total price at the bottom of the form
         public decimal totalCash = 0.00m;
-
+        string username;
         //arrays for item names, prices, and sugar/calorie conts.
         string[] itemNames = { "Pizza", "Burger", "Hot Dog", "Taco", "Mozz. Sticks", "Salad", "Fries", "Chips", "Pepsi", "Coke", "Iced Tea", "Water", "Pie", "Ice Cream", "Cookie", "F. Dough" };
 
@@ -33,10 +33,10 @@ namespace RitchiesFastFood_FinalProj
         }
 
         private void addToOrderButton_Click(object sender, EventArgs e)
-        { 
+        {
 
-                //iterates over every item in previous order and adds them to current order
-                foreach (string i in prevOrderListBox.Items)
+            //iterates over every item in previous order and adds them to current order
+            foreach (string i in prevOrderListBox.Items)
             {
                 itemsListBox.Items.Add(i);
             };
@@ -106,9 +106,28 @@ namespace RitchiesFastFood_FinalProj
 
         private void nameTextBox_TextChanged(object sender, EventArgs e)
         {
-            // create a file at pathName
-            string username =  nameTextBox.Text;
+            // create a file
+            username = nameTextBox.Text;
             FileStream user = File.Create($"{username}.txt");
+        }
+
+        private void checkoutButton_Click(object sender, EventArgs e)
+        {
+            using (StreamWriter sw = File.CreateText($"{username}.txt"))
+            {
+                sw.WriteLine(itemsListBox.Text);
+
+            }
+            using (StreamReader sr = new StreamReader("username.txt"))
+            {
+                // load previous data into user name and player score variables 
+                prevOrderListBox.Text = sr.ReadToEnd();
+            }
+        }
+            private void itemsListBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+         
         }
     }
 }
+

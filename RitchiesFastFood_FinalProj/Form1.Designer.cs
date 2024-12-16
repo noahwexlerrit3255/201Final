@@ -85,7 +85,7 @@
             // nameTextBox
             // 
             nameTextBox.Location = new Point(92, 51);
-            nameTextBox.Margin = new Padding(5, 5, 5, 5);
+            nameTextBox.Margin = new Padding(5);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.Size = new Size(200, 39);
             nameTextBox.TabIndex = 1;
@@ -116,7 +116,7 @@
             mainTable.Controls.Add(mainitem2, 1, 0);
             mainTable.Controls.Add(mainItem1, 0, 0);
             mainTable.Location = new Point(92, 180);
-            mainTable.Margin = new Padding(5, 5, 5, 5);
+            mainTable.Margin = new Padding(5);
             mainTable.Name = "mainTable";
             mainTable.RowCount = 1;
             mainTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -180,11 +180,12 @@
             // 
             itemsListBox.FormattingEnabled = true;
             itemsListBox.Location = new Point(20, 1108);
-            itemsListBox.Margin = new Padding(5, 5, 5, 5);
+            itemsListBox.Margin = new Padding(5);
             itemsListBox.Name = "itemsListBox";
             itemsListBox.Size = new Size(485, 164);
             itemsListBox.TabIndex = 4;
             itemsListBox.Click += itemsListBox_SelectedIndexChanged;
+            itemsListBox.SelectedIndexChanged += itemsListBox_SelectedIndexChanged_1;
             // 
             // label3
             // 
@@ -222,12 +223,13 @@
             // checkoutButton
             // 
             checkoutButton.Location = new Point(20, 1359);
-            checkoutButton.Margin = new Padding(5, 5, 5, 5);
+            checkoutButton.Margin = new Padding(5);
             checkoutButton.Name = "checkoutButton";
             checkoutButton.Size = new Size(248, 46);
             checkoutButton.TabIndex = 8;
             checkoutButton.Text = "Checkout";
             checkoutButton.UseVisualStyleBackColor = true;
+            checkoutButton.Click += checkoutButton_Click;
             // 
             // label6
             // 
@@ -245,7 +247,7 @@
             // 
             prevOrderListBox.FormattingEnabled = true;
             prevOrderListBox.Location = new Point(520, 1108);
-            prevOrderListBox.Margin = new Padding(5, 5, 5, 5);
+            prevOrderListBox.Margin = new Padding(5);
             prevOrderListBox.Name = "prevOrderListBox";
             prevOrderListBox.Size = new Size(488, 164);
             prevOrderListBox.TabIndex = 10;
@@ -254,7 +256,7 @@
             // addToOrderButton
             // 
             addToOrderButton.Location = new Point(760, 1285);
-            addToOrderButton.Margin = new Padding(5, 5, 5, 5);
+            addToOrderButton.Margin = new Padding(5);
             addToOrderButton.Name = "addToOrderButton";
             addToOrderButton.Size = new Size(248, 46);
             addToOrderButton.TabIndex = 11;
@@ -298,7 +300,7 @@
             sidesTable.Controls.Add(sideitem6, 1, 0);
             sidesTable.Controls.Add(sideitem5, 0, 0);
             sidesTable.Location = new Point(92, 416);
-            sidesTable.Margin = new Padding(5, 5, 5, 5);
+            sidesTable.Margin = new Padding(5);
             sidesTable.Name = "sidesTable";
             sidesTable.RowCount = 1;
             sidesTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -382,7 +384,7 @@
             drinksTable.Controls.Add(drinkItem10, 1, 0);
             drinksTable.Controls.Add(drinkItem9, 0, 0);
             drinksTable.Location = new Point(92, 652);
-            drinksTable.Margin = new Padding(5, 5, 5, 5);
+            drinksTable.Margin = new Padding(5);
             drinksTable.Name = "drinksTable";
             drinksTable.RowCount = 1;
             drinksTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -466,7 +468,7 @@
             dessertTable.Controls.Add(dessertItem14, 1, 0);
             dessertTable.Controls.Add(dessertItem13, 0, 0);
             dessertTable.Location = new Point(92, 886);
-            dessertTable.Margin = new Padding(5, 5, 5, 5);
+            dessertTable.Margin = new Padding(5);
             dessertTable.Name = "dessertTable";
             dessertTable.RowCount = 1;
             dessertTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -562,7 +564,7 @@
             Controls.Add(selectItemLabel);
             Controls.Add(nameTextBox);
             Controls.Add(label1);
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "Form1";
             Text = "Ritchie's Fast Food Online Menu";
             mainTable.ResumeLayout(false);
