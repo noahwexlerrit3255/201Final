@@ -1,6 +1,8 @@
 using System.Windows.Forms;
 using System.IO;
+using System.Text.Json;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Linq.Expressions;
 
 namespace RitchiesFastFood_FinalProj
 {
@@ -238,9 +240,17 @@ namespace RitchiesFastFood_FinalProj
         //load the usernames+passwords dictionary from saved file
         private void LoadUsers()
         {
-            if (File.Exists("users.json"))
+            try
             {
-                users = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText("users.json"));
+                if (File.Exists("users.json"))
+                {
+                    users = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText("users.json"));
+                }
+            }
+            catch (Exception ex)//in case the file is corrupted or couldn't be loaded etc
+            {
+                MessageBox.Show($"Error loading user data: {ex.Message}");
+                users = new Dictionary<string, string>();//just use an empty dictionary if one couldn't be loaded
             }
         }
     }
