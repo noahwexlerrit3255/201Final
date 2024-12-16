@@ -115,9 +115,9 @@ namespace RitchiesFastFood_FinalProj
         {
             if (!File.Exists($"{username}.txt"))
             {
-                using (StreamWriter sw = File.CreateText($"{username}.txt"))
+                using (StreamWriter sw = new StreamWriter($"{username}.txt"))
                 {
-                    sw.WriteLine(itemsListBox.Text);
+                    sw.WriteLine(itemsListBox.Items);
 
                 }
                 
@@ -125,7 +125,7 @@ namespace RitchiesFastFood_FinalProj
             using (StreamReader sr = new StreamReader($"{username}.txt"))
             {
                 // load previous data into user name and player score variables 
-                prevOrderListBox.Text = sr.ReadLine();
+                prevOrderListBox.Text += sr.ReadLine();
             }
         }
             private void itemsListBox_SelectedIndexChanged_1(object sender, EventArgs e)
