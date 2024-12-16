@@ -596,7 +596,7 @@
             button2.TabIndex = 24;
             button2.Text = "Create Account";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += btnSignUp_Click;
+            button2.Click += button2_Click;
             // 
             // Form1
             // 
