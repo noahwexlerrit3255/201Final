@@ -1,4 +1,6 @@
 using System.Windows.Forms;
+using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace RitchiesFastFood_FinalProj
 {
@@ -33,9 +35,10 @@ namespace RitchiesFastFood_FinalProj
         }
 
         private void addToOrderButton_Click(object sender, EventArgs e)
-        {
-            //iterates over every item in previous order and adds them to current order
-            foreach (string i in prevOrderListBox.Items)
+        { 
+
+                //iterates over every item in previous order and adds them to current order
+                foreach (string i in prevOrderListBox.Items)
             {
                 itemsListBox.Items.Add(i);
             };
@@ -96,6 +99,18 @@ namespace RitchiesFastFood_FinalProj
         private void totalIntLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void prevOrderListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // create a file at pathName
+            string username =  nameTextBox.Text;
+            FileStream user = File.Create($"{username}.txt");
         }
     }
 }
