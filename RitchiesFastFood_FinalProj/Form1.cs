@@ -6,9 +6,35 @@ namespace RitchiesFastFood_FinalProj
 {
     public partial class Form1 : Form
     {
+        //dictionary for usernames and passwords
+        private Dictionary<string, string> users = new Dictionary<string, string>
+        {
+            { "admin", "password" } //placeholder example for admin login
+        };
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        //click handler for login button
+        //checks if the username and password given exist in dictionary
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = nameTextBox_TextChanged.Text;
+            string password = TextBox_TextChanged.Text;
+
+            if (users.ContainsKey(username) && users[username] == password)
+            {
+                lblError.Text = "Login successful!";
+                lblError.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                //login failed
+                lblError.Text = "Invalid username or password Please try again.";
+                lblError.ForeColor = System.Drawing.Color.Red;
+            }
         }
 
         //variable for displaying the total price at the bottom of the form
