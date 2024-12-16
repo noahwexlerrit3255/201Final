@@ -226,6 +226,9 @@ namespace RitchiesFastFood_FinalProj
             sidesLabel.Visible = false;
             drinksLabel.Visible = false;
             dessertLabel.Visible = false;
+            label4.Visible = false;
+            label6.Visible = false;
+            label3.Visible = false;
         }
 
         //show all the ui items that were initially hidden (everything except login)
@@ -244,6 +247,9 @@ namespace RitchiesFastFood_FinalProj
             sidesLabel.Visible = true;
             drinksLabel.Visible = true;
             dessertLabel.Visible = true;
+            label4.Visible = true;
+            label6.Visible = true;
+            label3.Visible = true;
         }
 
         //save usernames+passwords dictionary to file
