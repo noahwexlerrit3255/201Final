@@ -112,7 +112,7 @@ namespace RitchiesFastFood_FinalProj
 
         private void prevOrderListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void nameTextBox_TextChanged(object sender, EventArgs e)
@@ -132,15 +132,18 @@ namespace RitchiesFastFood_FinalProj
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("order successful!");
+            itemsListBox.Items.Clear();
+
         }
         private void itemsListBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
+          
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           password = textBox1.Text;
+            password = textBox1.Text;
 
         }
 
@@ -304,6 +307,7 @@ namespace RitchiesFastFood_FinalProj
             }
         }
 
+       
     }
 }
 
