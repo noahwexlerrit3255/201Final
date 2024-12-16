@@ -598,12 +598,12 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-<<<<<<< Updated upstream
+
             ClientSize = new Size(634, 957);
             Controls.Add(button2);
-=======
+
             ClientSize = new Size(1030, 1531);
->>>>>>> Stashed changes
+
             Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(textBox1);
