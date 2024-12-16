@@ -167,7 +167,17 @@ namespace RitchiesFastFood_FinalProj
             }
         }
 
-            private void HideMainUI()
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            string username = nameTextBox.Text;
+            string password = TextBox1.Text;
+
+            //add new username and password pair
+            users[username] = password;
+            //then user needs to log in to see application
+        }
+
+        private void HideMainUI()
             {
                 itemsListBox.Visible = false;
                 addToOrderButton.Visible = false;
