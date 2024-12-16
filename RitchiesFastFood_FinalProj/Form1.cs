@@ -17,6 +17,7 @@ namespace RitchiesFastFood_FinalProj
         public Form1()
         {
             InitializeComponent();
+            LoadUsers();//load existing dictionary if it exists
             HideMainUI();
         }
 
@@ -198,6 +199,7 @@ namespace RitchiesFastFood_FinalProj
             {
                 //add new username and password pair to dictionary
                 users[username] = password;
+                SaveUsers();//save to file as well
                 //then user needs to log in to see application
             }
         }
@@ -241,25 +243,55 @@ namespace RitchiesFastFood_FinalProj
         //save usernames+passwords dictionary to file
         private void SaveUsers()
         {
-            File.WriteAllText("users.json", JsonSerializer.Serialize(users));
+            try
+            {
+                using (StreamWriter sw = new StreamWriter("username.txt", append: true))
+                {
+                    foreach (var user in users)
+                    {
+                        sw.WriteLine($"{user.Key}:{user.Value}");//save username and password pairs together
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving to file: {ex.Message}");
+            }
         }
 
+
         //load the usernames+passwords dictionary from saved file
+        // Load users from the username.txt file
         private void LoadUsers()
         {
             try
             {
-                if (File.Exists("users.json"))
+                if (File.Exists("username.txt"))
                 {
-                    users = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText("users.json"));
+                    users.Clear();
+
+                    using (StreamReader sr = new StreamReader("username.txt"))
+                    {
+                        string line;
+                        while ((line = sr.ReadLine()) != null)
+                        {
+                            //each line has a username and password separated by a colon
+                            var parts = line.Split(':');
+                            if (parts.Length == 2)
+                            {
+                                users[parts[0]] = parts[1];//add to dictionary
+                            }
+                        }
+                    }
                 }
             }
-            catch (Exception ex)//in case the file is corrupted or couldn't be loaded etc
+            catch (Exception ex)
             {
                 MessageBox.Show($"Error loading user data: {ex.Message}");
-                users = new Dictionary<string, string>();//just use an empty dictionary if one couldn't be loaded
+                users = new Dictionary<string, string>(); // Fallback to an empty dictionary
             }
         }
+
     }
 }
 
