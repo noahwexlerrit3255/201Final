@@ -95,6 +95,7 @@ namespace RitchiesFastFood_FinalProj
 
             //clears selection
             itemsListBox.ClearSelected();
+
         }
 
         private void totalIntLabel_Click(object sender, EventArgs e)
@@ -125,10 +126,11 @@ namespace RitchiesFastFood_FinalProj
   
         private void checkoutButton_Click(object sender, EventArgs e)
         {
+
             MessageBox.Show("order successful!");
+            totalCash = 0;
             itemsListBox.Items.Clear();
-            totalCash = 0.00m;
-          
+
 
 
         }
