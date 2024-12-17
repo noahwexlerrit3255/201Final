@@ -128,7 +128,7 @@ namespace RitchiesFastFood_FinalProj
         {
 
             MessageBox.Show("order successful!");
-            totalCash = 0;
+            totalCash = 0.00m;
             itemsListBox.Items.Clear();
 
 
