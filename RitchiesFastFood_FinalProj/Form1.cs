@@ -98,11 +98,7 @@ namespace RitchiesFastFood_FinalProj
 
         }
 
-        private void totalIntLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void prevOrderListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -126,9 +122,13 @@ namespace RitchiesFastFood_FinalProj
   
         private void checkoutButton_Click(object sender, EventArgs e)
         {
-
+            //show message
             MessageBox.Show("order successful!");
+            //update price
             totalCash = 0.00m;
+            //updates the displayed total price
+            totalIntLabel.Text = $"${totalCash}";
+            //clear listbox
             itemsListBox.Items.Clear();
 
 

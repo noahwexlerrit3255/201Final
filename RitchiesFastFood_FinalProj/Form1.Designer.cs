@@ -220,7 +220,7 @@
             totalIntLabel.Size = new Size(95, 45);
             totalIntLabel.TabIndex = 7;
             totalIntLabel.Text = "$0.00";
-            totalIntLabel.Click += totalIntLabel_Click;
+          
             // 
             // checkoutButton
             // 
